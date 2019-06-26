@@ -21,6 +21,10 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Travellister</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Advent Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allan" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -58,9 +62,13 @@
             <div class="row">
               <div class="col-md-12 wow fadeIn delay-05s">
                 <div class="banner-text">
-                  <h2>Hi there,<br><br> We are <span>Andrew</span> and <span>Ajey</span>.</h2>
+                  <h2>Hi there,</h2>
+                  <br><p>We are Andrew and Ajey and together, we are the <b>Travellister</b>.
+                  <br>We understand that you are super excited about your upcoming trip.
                   <br>
-                  <p id="p-intro"> Together, we are here to improve your travel <br> experience with our <span>packing list generator</span>.</p>
+                  We are here to revolutionize your travel experience with our <b> packing list generator </b>and <b>a lot more!</b></p>
+                  <br><span>Yours sincerely,<br>
+                  The Travellister Team</span>
                 </div>
                 <div class="overlay-detail text-center">
                   <a href="#about"><i class="fa fa-angle-down"></i></a>
@@ -76,7 +84,7 @@
         <div class="row">
           <div class="col-md-6 text-right">
             <h2 class="title-text">
-              <span class="deco2">About</span> <span class="deco3"> Travellister</span>
+              <span class="deco2">About Travellister</span> 
             </h2>
           </div>
           <div class="col-md-6 text-left">
@@ -100,9 +108,77 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="title text-center">Here's Our <span class="deco">Packing List Generator</span></h2>
+            <h2 class="deco4 text-center">Our Packing List Generator</h2>
           </div>
-          <form id="quiz" name="quiz">
+
+          <form id="regForm" action="/action_page.php">
+          <h3>Let us know more about you!</h3>
+      
+          <div class="tab"><b>Q1. What is your profile?</b>
+            <br>(Only input one of the following options - <b>Male</b> or <b>Female</b> or <b>Couple</b> or <b>Family</b>)<br><br>
+            <p><input placeholder="Traveller Profile" oninput="this.className = ''" name="TProfile"></p>
+          </div>
+
+          <div class="tab"><b>Q2. What is the travel group size? </b>
+            <br>(Please provide the input only in <b>NUMERICAL</b> form)<br><br>
+            <p><input placeholder="Travel Group Size" oninput="this.className = ''" name="TGSize"></p>
+          </div>
+
+          <div class="tab"><b>Q3. What is the trip length?</b>
+            <br>(Please specify the number of <b>DAYS</b> of the trip in <b>NUMERICAL</b> form) <br><br>
+            <p><input placeholder="Trip Length" oninput="this.className = ''" name="TLength"></p>
+          </div>
+
+          <div class="tab"><b>Q4. What is the type of accomodation? </b>
+            <br>(Only input one of the following options - <b>Hotel</b> or <b>Hostel</b> or <b>Guesthouse</b> or <b>Camping</b>) <br><br>
+            <p><input placeholder="Type of Accomodation" oninput="this.className = ''" name="TOAccomodation"></p>
+          </div>
+
+          <div class="tab"><b>Q5. What is the expected weather?</b>
+            <br>(Only input one of the following options - <b>Sunny</b> or <b>Rainy</b> or <b>Snowing</b> or <b>Freezing</b>) <br><br>
+            <p><input placeholder="Type of Accomodation" oninput="this.className = ''" name="TOAccomodation"></p>
+          </div>
+
+          <div class="tab"><b>Q6. Are there any outdoor activities?</b>
+            <br>(Only input <b>Yes</b> or <b>No</b>) <br><br>
+            <p><input placeholder="Yes/No" oninput="this.className = ''" name="Outdoor"></p>
+          </div>
+
+          <div class="tab"><b>Q7. Are there any water activities?</b>
+            <br>(Only input <b>Yes</b> or <b>No</b>) <br><br>
+            <p><input placeholder="Yes/No" oninput="this.className = ''" name="Water"></p>
+          </div>
+          <!--<div class="tab">Contact Info:
+            <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+            <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+          </div>
+          <div class="tab">Birthday:
+            <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
+             <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
+             <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+          </div>
+          <div class="tab">Login Info:
+             <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+             <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+          </div>-->
+          <div style="overflow:auto;">
+           <div style="float:right;">
+              <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+              <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+           </div>
+          </div>
+                <!-- Circles which indicates the steps of the form: -->
+          <div style="text-align:center;margin-top:40px;">
+           <span class="step"></span>
+           <span class="step"></span>
+           <span class="step"></span>
+           <span class="step"></span>
+           <span class="step"></span>
+           <span class="step"></span>
+           <span class="step"></span>
+          </div>
+     </form>
+     <!--
           <div class="col-md-12">
             <div id="myGrid" class="grid-padding">
               <div class="col-md-4 col-sm-4 padding-right-zero">
@@ -127,30 +203,36 @@
                 <img src="img/port02.jpg" class="img-responsive">
               </div>
             </div>
-          </div>
+          </div>-->
         </div>
       </div>
     </section>
-    <section id="additional" class="section-padding wow fadeInUp">
+    <section id="additional" class="section-padding wow fadeInUp ">
       <div class="container">
         <div class="row">
-          <h2 class="title text-center">Our <span class="deco">Additional</span> Features</h2>
+          <h2 class="deco4 text-center">Our Additional Features</h2>
           <div class="test-sec">
             <div class="col-sm-4">
+              <!--The Currency Rate Converter-->
               <blockquote>
-                <p>This is our currency rate converter. </p>
+              <div id="powerd"><a href="https://www.transfermate.com/" target="_blank" id="tm_add146" class="tm_add146">Powered by TransferMate</a></div>
+              <div id="demo-rate-convert"></div>
+              <noscript><br/><span style="color: red;">Please enable your JavaScript.</span></noscript>
               </blockquote>
+
               <div class="carousel-info">
-                <div class="pull-left"> <span class="testimonials-name">John Doe</span> <span class="testimonials-post">CEO,  Company Inc.</span> </div>
+                <div class="pull-left"> <span class="testimonials-name">Currency Rate Converter</span></div>
               </div>
             </div>
             <div class="col-sm-4">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diamsed commodo nibh ante facilisis bibendum dolor feugiat at. </p>
-              </blockquote>
-              <div class="carousel-info">
+               <a style="width:315px" class="weatherwidget-io" href="https://forecast7.com/en/1d35103d82/singapore/" data-label_1="SINGAPORE" data-label_2="WEATHER" data-theme="original" >SINGAPORE WEATHER</a>
+               <script>
+                 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+               </script>
+              
+              <!--<div class="carousel-info">
                 <div class="pull-left"> <span class="testimonials-name">John Doe</span> <span class="testimonials-post">CEO,  Company Inc.</span> </div>
-              </div>
+              </div>-->
             </div>
             <div class="col-sm-4">
               <blockquote>
@@ -169,7 +251,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="contact-sec text-center">
-              <h2 class="title text-center">Your Valuable <span class="deco">Feedback!</span></h2>
+              <h2 class="deco5 text-center">Your Valuable Feedback</h2>
               <p>What we prioritise is our seamless delivery of a sublime user experience. <br>Hence, if you think that any of our features require improvements, or if you have <br>any creative ideas for us, do let us know in the form below!</p>
             </div>
           </div>
@@ -243,6 +325,7 @@
       <div id="root"></div>
     </footer>
 
+    
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -250,6 +333,10 @@
     <script src="js/wow.js"></script>
     <script src="js/custom.js"></script>
     <script src="contactform/contactform.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/currency.js"></script>
+    <script src="js/weather.js"></script>
+
     
       <!--
         This HTML file is a template.
