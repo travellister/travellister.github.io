@@ -296,11 +296,12 @@ blockquote {
 span.testimonials-name {
   color: black;
   font-weight: 600;
-  margin: -5px 0 5px;
-  font-size: 17px;
-  border-style: solid;
+  margin: -10px 0 5px;
+  font-size: 25px;
+  font-family: 'Satisfy', cursive;
+  /*border-style: solid;
   border-color: #787574;
-  border-radius: 5px;
+  border-radius: 15px;*/
   padding: 5px;
 }
 
