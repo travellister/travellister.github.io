@@ -123,12 +123,13 @@ Responsive media queries
 }
 
 .banner-text p {
-  font-size: 33px;
+  font-size: 28px;
   /*font-weight: 400;*/
-  font-family: 'Allan', sans-serif;
+  font-family: 'Alegreya Sans SC', sans-serif;
   align-items: center;
   /*font-family: 'Satisfy';*/
   margin-bottom: 0px;
+  line-height: 35px;
 }
 
 .banner-text span {
@@ -572,4 +573,46 @@ button:hover {
 /* Mark the steps that are finished and valid: */
 .step.finish {
   background-color: #4CAF50;
+}
+
+
+
+
+
+
+
+
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
 }

@@ -22,6 +22,7 @@
     -->
     <title>Travellister</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Advent Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Allan" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -111,40 +112,44 @@
             <h2 class="deco4 text-center">Our Packing List Generator</h2>
           </div>
 
-          <form id="regForm" action="/action_page.php">
+          <form autocomplete="off" id="regForm" action="/action_page.php">
           <h3>Let us know more about you!</h3>
+
+          <div class="autocomplete tab">Q1. What is your travel destination?<br><br>
+            <p><input id="myInput" type="text" placeholder="Country" oninput="this.className = ''" name="myCountry" ></p>
+          </div>
       
-          <div class="tab"><b>Q1. What is your profile?</b>
+          <div class="tab"><b>Q2. What is your profile?</b>
             <br>(Only input one of the following options - <b>Male</b> or <b>Female</b> or <b>Couple</b> or <b>Family</b>)<br><br>
             <p><input placeholder="Traveller Profile" oninput="this.className = ''" name="TProfile"></p>
           </div>
 
-          <div class="tab"><b>Q2. What is the travel group size? </b>
+          <div class="tab"><b>Q3. What is the travel group size? </b>
             <br>(Please provide the input only in <b>NUMERICAL</b> form)<br><br>
             <p><input placeholder="Travel Group Size" oninput="this.className = ''" name="TGSize"></p>
           </div>
 
-          <div class="tab"><b>Q3. What is the trip length?</b>
+          <div class="tab"><b>Q4. What is the trip length?</b>
             <br>(Please specify the number of <b>DAYS</b> of the trip in <b>NUMERICAL</b> form) <br><br>
             <p><input placeholder="Trip Length" oninput="this.className = ''" name="TLength"></p>
           </div>
 
-          <div class="tab"><b>Q4. What is the type of accomodation? </b>
+          <div class="tab"><b>Q5. What is the type of accomodation? </b>
             <br>(Only input one of the following options - <b>Hotel</b> or <b>Hostel</b> or <b>Guesthouse</b> or <b>Camping</b>) <br><br>
             <p><input placeholder="Type of Accomodation" oninput="this.className = ''" name="TOAccomodation"></p>
           </div>
 
-          <div class="tab"><b>Q5. What is the expected weather?</b>
+          <div class="tab"><b>Q6. What is the expected weather?</b>
             <br>(Only input one of the following options - <b>Sunny</b> or <b>Rainy</b> or <b>Snowing</b> or <b>Freezing</b>) <br><br>
             <p><input placeholder="Type of Accomodation" oninput="this.className = ''" name="TOAccomodation"></p>
           </div>
 
-          <div class="tab"><b>Q6. Are there any outdoor activities?</b>
+          <div class="tab"><b>Q7. Are there any outdoor activities?</b>
             <br>(Only input <b>Yes</b> or <b>No</b>) <br><br>
             <p><input placeholder="Yes/No" oninput="this.className = ''" name="Outdoor"></p>
           </div>
 
-          <div class="tab"><b>Q7. Are there any water activities?</b>
+          <div class="tab"><b>Q8. Are there any water activities?</b>
             <br>(Only input <b>Yes</b> or <b>No</b>) <br><br>
             <p><input placeholder="Yes/No" oninput="this.className = ''" name="Water"></p>
           </div>
@@ -169,6 +174,7 @@
           </div>
                 <!-- Circles which indicates the steps of the form: -->
           <div style="text-align:center;margin-top:40px;">
+           <span class="step"></span>
            <span class="step"></span>
            <span class="step"></span>
            <span class="step"></span>
@@ -220,6 +226,7 @@
               <noscript><br/><span style="color: red;">Please enable your JavaScript.</span></noscript>
               </blockquote>
 
+              <!--The Weather Forecast Widget-->
               <div class="carousel-info">
                 <div class="pull-left"> <span class="testimonials-name">Currency Rate Converter</span></div>
               </div>
@@ -336,6 +343,7 @@
     <script src="js/quiz.js"></script>
     <script src="js/currency.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/autocomplete.js"></script>
 
     
       <!--
