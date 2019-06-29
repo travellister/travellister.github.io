@@ -3,6 +3,8 @@ import './../App.css';
 
 function TravellerProfile() {
 	return (
+
+		/*
 		<div className="Profile-Qns">
 			<input className="cb" type ="checkbox" />
 			<p>Male</p>
@@ -17,7 +19,9 @@ function TravellerProfile() {
 			<p>Child/Toddler</p>
 
 			<input type="button" value="Submit" onclick="msg()"/>
-		</div>
+		</div>*/
+		<div></div>
+
 		)
 }
 

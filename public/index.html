@@ -21,6 +21,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Travellister</title>
+    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Advent Pro" rel="stylesheet">
@@ -33,8 +34,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="myFunction()">
-    <div class="header">
-      <div class="bg-color">
+    <div class="header" style="height: 700px;">
+      <div class="bg-color" style="height: 700px">
         <header id="main-header">
           <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -80,7 +81,9 @@
         </div>
       </div>
     </div>
-    <section id="about" class="section-padding wow fadeIn delay-05s">
+
+    <!--The About Section-->
+    <section id="about" class="section-padding wow fadeIn delay-05s" style="height:700px;">
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-right">
@@ -90,6 +93,7 @@
           </div>
           <div class="col-md-6 text-left">
             <div class="about-text">
+              <br>
               <p>When packing for an overseas trip, most travellers would tap on their <b> past knowledge and experiences</b>, or even seek the advice of their <b>friends and family members</b>, who have already travelled to those places before.</p>
               <br>
               <p>
@@ -105,7 +109,9 @@
         </div>
       </div>
     </section>
-    <section id="main" class="section-padding wow fadeInUp delay-05s">
+
+    <!--The Main Section-->
+    <section id="main" class="section-padding wow fadeInUp delay-05s" style="height:700px;">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -153,19 +159,6 @@
             <br>(Only input <b>Yes</b> or <b>No</b>) <br><br>
             <p><input placeholder="Yes/No" oninput="this.className = ''" name="Water"></p>
           </div>
-          <!--<div class="tab">Contact Info:
-            <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-            <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
-          </div>
-          <div class="tab">Birthday:
-            <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
-             <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-             <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
-          </div>
-          <div class="tab">Login Info:
-             <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-             <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
-          </div>-->
           <div style="overflow:auto;">
            <div style="float:right;">
               <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
@@ -184,42 +177,20 @@
            <span class="step"></span>
           </div>
      </form>
-     <!--
-          <div class="col-md-12">
-            <div id="myGrid" class="grid-padding">
-              <div class="col-md-4 col-sm-4 padding-right-zero">
-                <img src="img/portfolio01.jpg" class="img-responsive">
-                <img src="img/port01.jpg" class="img-responsive">
-                <img src="img/port02.jpg" class="img-responsive">
-                <img src="img/portfolio01.jpg" class="img-responsive">
-              </div>
-              <div class="col-md-4 col-sm-4 padding-right-zero">
-                <img src="img/portfolio02.jpg" class="img-responsive">
-                <img src="img/port01.jpg" class="img-responsive">
-                <img src="img/port02.jpg" class="img-responsive">
-                <img src="img/portfolio01.jpg" class="img-responsive">
-                <img src="img/port03.jpg" class="img-responsive">
-              </div>
-              <div class="col-md-4 col-sm-4 padding-right-zero">
-                <img src="img/port01.jpg" class="img-responsive">
-                <img src="img/portfolio01.jpg" class="img-responsive">
-                <img src="img/portfolio02.jpg" class="img-responsive">
-                <img src="img/port03.jpg" class="img-responsive">
-                <img src="img/portfolio02.jpg" class="img-responsive">
-                <img src="img/port02.jpg" class="img-responsive">
-              </div>
-            </div>
-          </div>-->
         </div>
       </div>
     </section>
+
+
+    <!--The Additional Section-->
     <section id="additional" class="section-padding wow fadeInUp ">
       <div class="container">
         <div class="row">
           <h2 class="deco4 text-center">Our Additional Features</h2>
           <div class="test-sec">
+
+            <!--The Currency Rate Converter-->
             <div class="col-sm-4">
-              <!--The Currency Rate Converter-->
               <blockquote>
               <div id="demo-rate-convert"></div>
               <noscript><br/><span style="color: red;">Please enable your JavaScript.</span></noscript>
@@ -236,32 +207,41 @@
                <script>
                  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
                </script>
-              
-              <!--<div class="carousel-info">
-                <div class="pull-left"> <span class="testimonials-name">John Doe</span> <span class="testimonials-post">CEO,  Company Inc.</span> </div>
-              </div>-->
             </blockquote>
             <div class="carousel-info">
                 <div class="pull-left"> <span class="testimonials-name">Weather Forecast</span></div>
               </div>
             </div>
 
-
-
-
-            <div class="col-sm-4">
+            <!--The To-Do List-->
+            <div class="col-sm-4-TD">
               <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diamsed commodo nibh ante facilisis bibendum dolor feugiat at. </p>
-              </blockquote>
+               <div id="myDIV" class="headerTD">
+                <h2 style="margin:10px; font-family:'Kalam'; color:white; font-size: 25px"><b>My To-Do List</b></h2>
+                <input style="font-family: 'Kalam'; size:5"id="myInputTD" placeholder="My Task...">
+                <span onclick="newElement()" class="addBtn">Add</span>
+              </div>
+              <ul style="margin:0px;padding:0px;" id="myUL">
+                <li>Bring travel documents</li>
+                <li class="checked">Bring medication</li>
+                <li>Bring power adapter</li>
+                <li>Download travel apps</li>
+                <li>Charge all electronics</li>
+              </ul>
+            </blockquote>
               <div class="carousel-info">
-                <div class="pull-left"> <span class="testimonials-name">John Doe</span> <span class="testimonials-post">CEO,  Company Inc.</span> </div>
+                <div class="pull-left"> <span class="testimonials-name">My To-Do List</span></div>
               </div>
             </div>
+
+          </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="feedback" class="section-padding wow fadeIn delay-05s">
+
+    <!--The Feedback Form-->
+    <section id="feedback" class="section-padding wow fadeIn delay-05s" style="height:700px;">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -299,21 +279,22 @@
         </div>
       </div>
     </section>
+    <!--
     <footer class="footer-2 text-center-xs bg--white">
-      <div class="container">
+      <div class="container">-->
         <!--end row-->
-        <div class="row">
+        <!--<div class="row">
           <div class="col-md-6">
             <div class="footer">
               © Copyright Laura Theme. All Rights Reserved
-              <div class="credits">
+              <div class="credits">-->
                 <!--
                   All the links in the footer should remain intact. 
                   You can delete the links only if you purchased the pro version.
                   Licensing information: https://bootstrapmade.com/license/
                   Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Laura
                 -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade.com</a>
+               <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade.com</a>
               </div>
             </div>
           </div>
@@ -334,7 +315,7 @@
             </ul>
           </div>
 
-        </div>
+        </div>-->
         <!--end row-->
       </div>
       <div id="root"></div>
@@ -352,6 +333,7 @@
     <script src="js/currency.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/autocomplete.js"></script>
+    <script src="js/Todo.js"></script>
 
     
       <!--
