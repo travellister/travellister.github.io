@@ -20,7 +20,7 @@
   $contact_error_name = "Name is too short or empty!";
   $contact_error_email = "Please enter a valid email!";
   $contact_error_subject = "Subject is too short or empty!";
-  $contact_error_message = "Too short message! Please enter something.";
+  $contact_error_message = "The message is too short! Please enter a longer message.";
 
 /********** Do not edit from the below line ***********/
 
@@ -39,7 +39,7 @@
       die('The contact form receiving email address is not configured!');
     }
 
-    if(strlen($name)<3){
+    if(strlen($name)<1){
       die($contact_error_name);
     }
 
@@ -47,7 +47,7 @@
       die($contact_error_email);
     }
 
-    if(strlen($subject)<3){
+    if(strlen($subject)<1){
       die($contact_error_subject);
     }
 
