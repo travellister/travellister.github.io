@@ -671,7 +671,7 @@ button:hover {
   background: #eee;
   font-size: 18px;
   transition: 0.2s;
-  font-family: 'Kalam';
+  font-family: 'Tahoma,Arial,Verdana,Segoe,sans-serif';
   
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -763,7 +763,7 @@ button:hover {
   cursor: pointer;
   transition: 0.3s;
   border-radius: 5px;
-  font-family: 'Satisfy';
+  font-family: 'Tahoma,Arial,Verdana,Segoe,sans-serif';
 }
 
 .addBtn:hover {
