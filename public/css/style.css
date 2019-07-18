@@ -101,7 +101,7 @@ Responsive media queries
 
 .bg-color {
   background-color: RGBA(0, 0, 0, 0.67);
-  min-height: 650px;
+  min-height: 800px;
 }
 
 .navbar-border {}
@@ -188,6 +188,7 @@ Responsive media queries
   background: url('../img/about-pic3.jpg') no-repeat;
   background-size: cover;
   margin-bottom: -3px;
+  min-height: 800px;
 }
 
 .section-padding {
@@ -223,17 +224,20 @@ Responsive media queries
   background: url('../img/main.jpg') no-repeat;
   margin-bottom: -3px;
   background-size: cover;
+  min-height: 800px;
 }
 
 #feedback {
   background: url('../img/feedback.jpg') no-repeat;
   margin-bottom: -3px;
+  min-height: 800px;
 }
 
 #additional {
   background: url('../img/additional.jpg') no-repeat;
   background-size: cover;
   margin-bottom: -3px;
+  min-height: 800px;
 }
 
 .grid-padding {
@@ -519,13 +523,13 @@ h3 {
   text-align: center;  
 }
 
-.form-group input {
+/*.form-group input {
   padding: 10px;
   width: 100%;
   font-size: 17px;
   font-family: Raleway;
   border: 1px solid #aaaaaa;
-}
+}*/
 
 /* Mark input boxes that gets an error on validation: */
 .form-group input.invalid {
