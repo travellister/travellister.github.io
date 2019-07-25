@@ -53,6 +53,50 @@ function validateForm() {
       // and set the current valid status to false
       valid = false;
     }
+    if (currentTab == 1) {
+      if ((y[i].value != "Male") && (y[i].value != "Female") && (y[i].value != "Couple") && (y[i].value != "Family")
+        && (y[i].value != "male") && (y[i].value != "female") && (y[i].value != "couple") && (y[i].value != "family")) {
+      // add an "invalid" class to the field:
+        y[i].className += " invalid";
+      // and set the current valid status to false
+        valid = false;
+      }
+    }
+    if ((currentTab == 2) || (currentTab == 3)) {
+      //check if input is in numerical form
+      if (isNaN(y[i].value)) {
+        // add an "invalid" class to the field:
+        y[i].className += " invalid";
+      // and set the current valid status to false
+        valid = false;
+      }
+    }
+    if (currentTab == 4) {
+      if ((y[i].value != "Hotel") && (y[i].value != "Hostel") && (y[i].value != "Guesthouse") && (y[i].value != "Camping") 
+        && (y[i].value != "hotel") && (y[i].value != "hostel") && (y[i].value != "guesthouse") && (y[i].value != "camping")) {
+        // add an "invalid" class to the field:
+        y[i].className += " invalid";
+      // and set the current valid status to false
+        valid = false;
+      }
+    }
+    if (currentTab == 5) {
+      if ((y[i].value != "Sunny") && (y[i].value != "Rainy") && (y[i].value != "Snowing") && (y[i].value != "Freezing") 
+        && (y[i].value != "sunny") && (y[i].value != "rainy") && (y[i].value != "snowing") && (y[i].value != "freezing")) {
+        // add an "invalid" class to the field:
+        y[i].className += " invalid";
+      // and set the current valid status to false
+        valid = false;
+      }
+    }
+    if ((currentTab == 6) || (currentTab == 7)) {
+      if ((y[i].value != "Yes") && (y[i].value != "yes") && (y[i].value != "No") && (y[i].value != "no")) {
+        // add an "invalid" class to the field:
+        y[i].className += " invalid";
+      // and set the current valid status to false
+        valid = false;
+      }
+    }
   }
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
