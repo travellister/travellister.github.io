@@ -1,0 +1,36 @@
+[debug] [2019-07-26T09:32:07.252Z] ----------------------------------------------------------------------
+[debug] [2019-07-26T09:32:07.255Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2019-07-26T09:32:07.255Z] CLI Version:   7.2.0
+[debug] [2019-07-26T09:32:07.255Z] Platform:      darwin
+[debug] [2019-07-26T09:32:07.255Z] Node Version:  v10.16.0
+[debug] [2019-07-26T09:32:07.256Z] Time:          Fri Jul 26 2019 17:32:07 GMT+0800 (Singapore Standard Time)
+[debug] [2019-07-26T09:32:07.256Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-07-26T09:32:07.267Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-07-26T09:32:07.267Z] > authorizing via signed-in user
+[debug] [2019-07-26T09:32:07.267Z] [iam] checking project the-travellister-duo for permissions ["firebase.projects.get"]
+[debug] [2019-07-26T09:32:07.269Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/the-travellister-duo:testIamPermissions  
+
+[debug] [2019-07-26T09:32:09.072Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-26T09:32:09.074Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/the-travellister-duo  
+ 
+[debug] [2019-07-26T09:32:09.376Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/andrew/Desktop/travellister.github.io'...
+[info] 
+[debug] [2019-07-26T09:32:09.382Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/the-travellister-duo/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[debug] [2019-07-26T09:32:09.404Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/the-travellister-duo/adminSdkConfig  
+ 
+[debug] [2019-07-26T09:32:09.704Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-26T09:32:09.748Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[info] ✔  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "/Users/andrew/Desktop/travellister.github.io/functions" for Cloud Functions...
+[debug] [2019-07-26T09:32:10.319Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/andrew/Desktop/travellister.github.io/functions","node_version":"10.16.0"}
+[debug] [2019-07-26T09:32:10.319Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true} {}
+[debug] [2019-07-26T09:32:10.323Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.3.0","resolution":"/Users/andrew/Desktop/travellister.github.io/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-07-26T09:32:10.325Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/andrew/Desktop/travellister.github.io/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-07-26T09:32:10.326Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/andrew/Desktop/travellister.github.io/functions/node_modules/firebase-functions/lib/index.js"}
