@@ -66,6 +66,15 @@ function newPackingElement() {
  * and the logic behind how the packing list is generated.
  *
  */
+
+function makeEven(num) {
+  if (num % 2 != 0) {
+    return (num + 1);
+  } else {
+    return num;
+  }
+}
+
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
@@ -86,10 +95,16 @@ function showTab(n) {
     document.getElementById("packingList").style.display="block";
     //Q1
     var destination = document.getElementById("myInput").value;
+    var profile = document.getElementById("Q2").value;
+    var size = document.getElementById("Q3").value;
+    var length = document.getElementById("Q4").value;
+    var accomodation = document.getElementById("Q5").value;
+    var weather = document.getElementById("Q6").value;
+    var outdoor = document.getElementById("Q7").value;
+    var water = document.getElementById("Q8").value;
+
 
     //Q2
-    var profile = document.getElementById("Q2").value;
-    var length = document.getElementById("Q4").value;
     if (profile === "female" || profile === "Female" || profile === "Couple" || profile === "couple" 
       || profile === "family" || profile === "Family") {
       var pNode1 = document.createElement("LI");
@@ -162,9 +177,6 @@ function showTab(n) {
       }
     }
 
-    //Q3
-    var size = document.getElementById("Q3").value;
-
     //Q4
     
     //length item1
@@ -223,7 +235,7 @@ function showTab(n) {
     }
     //length item4
     var lNode4 = document.createElement("LI");
-    var textlNode4 = document.createTextNode("(Clothing/Accessories) " + Math.ceil((size*length) / 3) + " Sleepwear(s)");
+    var textlNode4 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 3)) + " Sleepwear(s)");
     lNode4.appendChild(textlNode4);
     document.getElementById("myCloth").appendChild(lNode4);
     if (true) {
@@ -296,7 +308,6 @@ function showTab(n) {
 
 
     //Q5
-    var accomodation = document.getElementById("Q5").value;
     if (accomodation === "Hotel" || accomodation === "Hostel" || accomodation === "Guesthouse" 
       || accomodation === "hotel" || accomodation === "hostel" || accomodation === "guesthouse") {
       //hotel item1
@@ -357,7 +368,6 @@ function showTab(n) {
     }
 
     //Q6
-    var weather = document.getElementById("Q6").value;
     if (weather == "Snowing" || weather == "snowing" || weather == "Freezing" 
       || weather == "freezing") {
       //freezing item1
@@ -380,7 +390,7 @@ function showTab(n) {
       }
       //freezing item2
       var wNode4 = document.createElement("LI");
-      var textwNode4 = document.createTextNode("(Clothing/Accessories) " + size + " Glove(s) & Scarves");
+      var textwNode4 = document.createTextNode("(Clothing/Accessories) " + size + " Glove(s) & Scarve(s)");
       wNode4.appendChild(textwNode4);
       document.getElementById("myCloth").appendChild(wNode4);
       if (true) {
@@ -398,7 +408,7 @@ function showTab(n) {
       }
       //freezing item3
       var wNode5 = document.createElement("LI");
-      var textwNode5 = document.createTextNode("(Clothing/Accessories) " + Math.ceil(size * (length/2)) + " Thermal Wear");
+      var textwNode5 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil(size * (length/2))) + " Thermal Wear");
       wNode5.appendChild(textwNode5);
       document.getElementById("myCloth").appendChild(wNode5);
       if (true) {
@@ -416,7 +426,7 @@ function showTab(n) {
       }
       //freezing item4
       var wNode10 = document.createElement("LI");
-      var textwNode10 = document.createTextNode("(Clothing/Accessories) " + Math.ceil((size*length) / 3) + " Jean(s)/Pant(s)/Dress(es)");
+      var textwNode10 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 3)) + " Jean(s)/Pant(s)/Dress(es)");
       wNode10.appendChild(textwNode10);
       document.getElementById("myCloth").appendChild(wNode10);
       if (true) {
@@ -509,7 +519,7 @@ function showTab(n) {
       }
       //rainy item3
       var wNode11 = document.createElement("LI");
-      var textwNode11 = document.createTextNode("(Clothing/Accessories) " + Math.ceil((size*length) / 4) + " Jean(s)/Pant(s)/Dress(es)");
+      var textwNode11 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4)) + " Jean(s)/Pant(s)/Dress(es)");
       wNode11.appendChild(textwNode11);
       document.getElementById("myCloth").appendChild(wNode11);
       if (true) {
@@ -527,7 +537,7 @@ function showTab(n) {
       }
       //rainy item4
       var wNode12 = document.createElement("LI");
-      var textwNode12 = document.createTextNode("(Clothing/Accessories) " + Math.ceil((size*length) / 4) + " Short(s)/Skirt(s)");
+      var textwNode12 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4)) + " Short(s)/Skirt(s)");
       wNode12.appendChild(textwNode12);
       document.getElementById("myCloth").appendChild(wNode12);
       if (true) {
@@ -564,7 +574,7 @@ function showTab(n) {
       }
       //sunny item2
       var lNode5 = document.createElement("LI");
-      var textlNode5 = document.createTextNode("(Clothing/Accessories) " + Math.ceil((size*length) / 4) + " Jean(s)/Pant(s)/Dress(es)");
+      var textlNode5 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4)) + " Jean(s)/Pant(s)/Dress(es)");
       lNode5.appendChild(textlNode5);
       document.getElementById("myCloth").appendChild(lNode5);
       if (true) {
@@ -582,7 +592,7 @@ function showTab(n) {
       }
       //sunny item3
       var wNode9 = document.createElement("LI");
-      var textwNode9 = document.createTextNode("(Clothing/Accessories) " + Math.ceil((size*length) / 4) + " Short(s)/Skirt(s)");
+      var textwNode9 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4)) + " Short(s)/Skirt(s)");
       wNode9.appendChild(textwNode9);
       document.getElementById("myCloth").appendChild(wNode9);
       if (true) {
@@ -601,7 +611,6 @@ function showTab(n) {
     }
 
     //Q7
-    var outdoor = document.getElementById("Q7").value;
     if (outdoor == "Yes" || outdoor == "yes") {
       //outdoor item1
       var oNode1 = document.createElement("LI");
@@ -624,7 +633,6 @@ function showTab(n) {
     }
 
     //Q8 water
-    var water = document.getElementById("Q8").value;
     if (water == "Yes" || water == "yes") {
       //water item1
       var wtNode1 = document.createElement("LI");
@@ -717,7 +725,7 @@ function validateForm() {
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
-    if (y[i].value == "") {
+    /*if (y[i].value == "") {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false
@@ -766,7 +774,7 @@ function validateForm() {
       // and set the current valid status to false
         valid = false;
       }
-    }
+    }*/
   }
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
