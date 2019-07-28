@@ -1,7 +1,10 @@
-
+/**
+ * This section covers the implementation of the packing list as one 
+ * that is customizable and works just like the to-do list.
+ *
+ */
 // Create a "close" button and append it to each list item
-//var test = document.getElementsByClassName("col-sm-4-TD");
-var test = document.getElementById("myUL");
+var test = document.getElementById("myPackingUL");
 var myNodelist = test.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -22,6 +25,47 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('#myPackingUL');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newPackingElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInputPL").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myPackingUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+
+
+/**
+ * This section covers the implementation of the questionnaire 
+ * and the logic behind how the packing list is generated.
+ *
+ */
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 

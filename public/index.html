@@ -187,11 +187,11 @@
           <form style="display:none" id="packingList">
            <div id="myDIV" class="headerPacking">
                 <h2 style="margin:10px; font-family:'Satisfy', cursive;color:white; font-size: 25px"><b>My Packing List</b></h2>
-                <input style="font-family:'Satisfy', cursive; size:5"id="myInputTD" placeholder="My Packing List...">
-                <span onclick="newElement()" class="addBtnPacking">Add</span>
+                <input style="font-family:'Satisfy', cursive; size:5"id="myInputPL" placeholder="My Packing List...">
+                <span onclick="newPackingElement()" class="addBtnPacking">Add</span>
 
               </div>
-              <ul style="margin:0px;padding:0px;" id="myUL">
+              <ul style="margin:0px;padding:0px;" id="myPackingUL">
                <!-- <li class="checked">Bring medication</li>-->
                 <ol id="myCloth" style="padding-left: 0px; font-size: 25px; font-family:'Satisfy', cursive;">~ Clothing/Accessories ~</ol>
 
@@ -225,6 +225,8 @@
                 <li>(Misc.) Glasses (if applicable)</li>
                 <li>(Misc.) Maps/Guidebooks</li>
                 <li>(Misc.) Paper/Pen</li>
+
+                <ol id="myAddition" style="padding-left: 0px; font-size: 25px; font-family:'Satisfy', cursive; color: white">~ Additional Items ~</ol>
               </ul>
             </div>
           </form>
