@@ -66,12 +66,16 @@ function newPackingElement() {
  * and the logic behind how the packing list is generated.
  *
  */
-function makeEven(num) {
-  if (num % 2 != 0) {
-    return (num + 1);
-  } else {
-    return num;
-  }
+function makeEven(num, day) {
+	if (day > 1) {
+	  if (num % 2 != 0) {
+	    return (num + 1);
+	  } else {
+	    return num;
+	  }
+	} else {
+		return num;
+	}
 }
 
 var currentTab = 0; // Current tab is set to be the first tab (0)
@@ -234,7 +238,7 @@ function showTab(n) {
     }
     //length item4
     var lNode4 = document.createElement("LI");
-    var textlNode4 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 3)) + " Sleepwear(s)");
+    var textlNode4 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 3), length) + " Sleepwear(s)");
     lNode4.appendChild(textlNode4);
     document.getElementById("myCloth").appendChild(lNode4);
     if (true) {
@@ -407,7 +411,7 @@ function showTab(n) {
       }
       //freezing item3
       var wNode5 = document.createElement("LI");
-      var textwNode5 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil(size * (length/2))) + " Thermal Wear");
+      var textwNode5 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil(size * (length/2)), length) + " Thermal Wear");
       wNode5.appendChild(textwNode5);
       document.getElementById("myCloth").appendChild(wNode5);
       if (true) {
@@ -425,7 +429,7 @@ function showTab(n) {
       }
       //freezing item4
       var wNode10 = document.createElement("LI");
-      var textwNode10 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 3)) + " Jean(s)/Pant(s)/Dress(es)");
+      var textwNode10 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 3), length) + " Jean(s)/Pant(s)/Dress(es)");
       wNode10.appendChild(textwNode10);
       document.getElementById("myCloth").appendChild(wNode10);
       if (true) {
@@ -518,7 +522,7 @@ function showTab(n) {
       }
       //rainy item3
       var wNode11 = document.createElement("LI");
-      var textwNode11 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4)) + " Jean(s)/Pant(s)/Dress(es)");
+      var textwNode11 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4), length) + " Jean(s)/Pant(s)/Dress(es)");
       wNode11.appendChild(textwNode11);
       document.getElementById("myCloth").appendChild(wNode11);
       if (true) {
@@ -536,7 +540,7 @@ function showTab(n) {
       }
       //rainy item4
       var wNode12 = document.createElement("LI");
-      var textwNode12 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4)) + " Short(s)/Skirt(s)");
+      var textwNode12 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4), length) + " Short(s)/Skirt(s)");
       wNode12.appendChild(textwNode12);
       document.getElementById("myCloth").appendChild(wNode12);
       if (true) {
@@ -573,7 +577,7 @@ function showTab(n) {
       }
       //sunny item2
       var lNode5 = document.createElement("LI");
-      var textlNode5 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4)) + " Jean(s)/Pant(s)/Dress(es)");
+      var textlNode5 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4), length) + " Jean(s)/Pant(s)/Dress(es)");
       lNode5.appendChild(textlNode5);
       document.getElementById("myCloth").appendChild(lNode5);
       if (true) {
@@ -591,7 +595,7 @@ function showTab(n) {
       }
       //sunny item3
       var wNode9 = document.createElement("LI");
-      var textwNode9 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4)) + " Short(s)/Skirt(s)");
+      var textwNode9 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4), length) + " Short(s)/Skirt(s)");
       wNode9.appendChild(textwNode9);
       document.getElementById("myCloth").appendChild(wNode9);
       if (true) {
