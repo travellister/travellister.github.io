@@ -66,10 +66,12 @@ function newPackingElement() {
  * and the logic behind how the packing list is generated.
  *
  */
-function makeEven(num, day) {
+function makeEven(num, day, size) {
 	if (day > 1) {
-	  if (num % 2 != 0) {
-	    return (num + 1);
+	  if ((num % size != 0)) {
+      var number = num + (size - (num % size));
+      console.log(num + " " + size + " " + number);
+      return number;
 	  } else {
 	    return num;
 	  }
@@ -106,22 +108,57 @@ function showTab(n) {
     var outdoor = document.getElementById("Q7").value;
     var water = document.getElementById("Q8").value;
 
-
     //Q2
-    if (profile === "female" || profile === "Female" || profile === "Couple" || profile === "couple" 
-      || profile === "family" || profile === "Family") {
+    if (profile === "female" || profile === "Female" || profile === "Couple" || profile === "couple") {
+      if (profile === "female" || profile === "Female") {
+        var pNode4 = document.createElement("LI");
+        var textpNode4 = document.createTextNode("(Clothing /Accessories) " + (size * length) + " Bra(s) for " + size + " pax");
+        pNode4.appendChild(textpNode4);
+        document.getElementById("myCloth").appendChild(pNode4);
+        if (true) {
+          var span = document.createElement("SPAN");
+          var txt = document.createTextNode("\u00D7");
+          span.className = "close";
+          span.appendChild(txt);
+          pNode4.appendChild(span);
+          for (i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+            }
+          }
+        }
+      } else {
+        var pNode6 = document.createElement("LI");
+        var textpNode6 = document.createTextNode("(Clothing /Accessories) " + (Math.ceil(size/2) * length) + " Bra(s) for " + Math.ceil(size/2) + " pax");
+        pNode6.appendChild(textpNode6);
+        document.getElementById("myCloth").appendChild(pNode6);
+        if (true) {
+          var span = document.createElement("SPAN");
+          var txt = document.createTextNode("\u00D7");
+          span.className = "close";
+          span.appendChild(txt);
+          pNode6.appendChild(span);
+          for (i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+            }
+          }
+        }
+      }
       var pNode1 = document.createElement("LI");
       var pNode2 = document.createElement("LI");
       var pNode3 = document.createElement("LI");
-      var pNode4 = document.createElement("LI");
+      
       var textpNode1 = document.createTextNode("(Toiletries) Feminine-hygiene Products");
       var textpNode2 = document.createTextNode("(Toiletries) Makeup");
       var textpNode3 = document.createTextNode("(Toiletries) Makeup Remover");
-      var textpNode4 = document.createTextNode("(Clothing/Accessories) " + length + " Bra(s)");
+      
       pNode1.appendChild(textpNode1);
       pNode2.appendChild(textpNode2);
       pNode3.appendChild(textpNode3);
-      pNode4.appendChild(textpNode4);
+      
       document.getElementById("myToilet").appendChild(pNode1);
       if (true) {
         var span = document.createElement("SPAN");
@@ -164,27 +201,33 @@ function showTab(n) {
           }
         }
       }
-      document.getElementById("myCloth").appendChild(pNode4);
-      if (true) {
-        var span = document.createElement("SPAN");
-        var txt = document.createTextNode("\u00D7");
-        span.className = "close";
-        span.appendChild(txt);
-        pNode4.appendChild(span);
-        for (i = 0; i < close.length; i++) {
-          close[i].onclick = function() {
-          var div = this.parentElement;
-          div.style.display = "none";
+    }
+
+    if (profile === "family" || profile === "Family") {
+        var pNode5 = document.createElement("LI");
+        var textpNode5 = document.createTextNode("(Clothing /Accessories) " + (Math.ceil(size / 2) * length) + " Bra(s) for " + Math.ceil(size / 2) + " pax");
+        pNode5.appendChild(textpNode5);
+        document.getElementById("myCloth").appendChild(pNode5);
+        if (true) {
+          var span = document.createElement("SPAN");
+          var txt = document.createTextNode("\u00D7");
+          span.className = "close";
+          span.appendChild(txt);
+          pNode5.appendChild(span);
+          for (i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+            }
           }
         }
       }
-    }
 
     //Q4
     
     //length item1
     var lNode1 = document.createElement("LI");
-    var textlNode1 = document.createTextNode("(Clothing/Accessories) " + (size*length) + " Underwear(s)");
+    var textlNode1 = document.createTextNode("(Clothing /Accessories) " + (size*length) + " Underwear(s) for " + size + " pax");
     lNode1.appendChild(textlNode1);
     document.getElementById("myCloth").appendChild(lNode1);
     if (true) {
@@ -202,7 +245,7 @@ function showTab(n) {
     }
     //length item2
     var lNode2 = document.createElement("LI");
-    var textlNode2 = document.createTextNode("(Clothing/Accessories) " + (size*length) + " Sock(s)");
+    var textlNode2 = document.createTextNode("(Clothing /Accessories) " + (size*length) + " Sock(s) for " + size + " pax");
     lNode2.appendChild(textlNode2);
     document.getElementById("myCloth").appendChild(lNode2);
     if (true) {
@@ -220,7 +263,7 @@ function showTab(n) {
     }
     //length item3
     var lNode3 = document.createElement("LI");
-    var textlNode3 = document.createTextNode("(Clothing/Accessories) " + (size*length) + " Tshirt(s)/Blouse(s)");
+    var textlNode3 = document.createTextNode("(Clothing /Accessories) " + (size*length) + " Tshirt(s)/Blouse(s) for " + size + " pax");
     lNode3.appendChild(textlNode3);
     document.getElementById("myCloth").appendChild(lNode3);
     if (true) {
@@ -238,7 +281,7 @@ function showTab(n) {
     }
     //length item4
     var lNode4 = document.createElement("LI");
-    var textlNode4 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 3), length) + " Sleepwear(s)");
+    var textlNode4 = document.createTextNode("(Clothing /Accessories) " + makeEven(Math.floor((size*length) / 3), length, size) + " Sleepwear(s) for " + size + " pax");
     lNode4.appendChild(textlNode4);
     document.getElementById("myCloth").appendChild(lNode4);
     if (true) {
@@ -256,7 +299,7 @@ function showTab(n) {
     }
     //length item6
     var lNode6 = document.createElement("LI");
-    var textlNode6 = document.createTextNode("(Clothing/Accessories) " + size + " Slipper(s)/Sandal(s)");
+    var textlNode6 = document.createTextNode("(Clothing /Accessories) " + size + " Slipper(s)/Sandal(s) for " + size + " pax");
     lNode6.appendChild(textlNode6);
     document.getElementById("myCloth").appendChild(lNode6);
     if (true) {
@@ -274,7 +317,7 @@ function showTab(n) {
     }
     //length item7
     var lNode7 = document.createElement("LI");
-    var textlNode7 = document.createTextNode("(Clothing/Accessories) " + size + " Belt(s)");
+    var textlNode7 = document.createTextNode("(Clothing /Accessories) " + size + " Belt(s) for " + size + " pax");
     lNode7.appendChild(textlNode7);
     document.getElementById("myCloth").appendChild(lNode7);
     if (true) {
@@ -292,7 +335,7 @@ function showTab(n) {
     }
     //length item8
     var lNode8 = document.createElement("LI");
-    var textlNode8 = document.createTextNode("(Clothing/Accessories) " + size + " Leisure Shoe(s)");
+    var textlNode8 = document.createTextNode("(Clothing /Accessories) " + size + " Leisure Shoe(s) for " + size + " pax");
     lNode8.appendChild(textlNode8);
     document.getElementById("myCloth").appendChild(lNode8);
     if (true) {
@@ -315,9 +358,9 @@ function showTab(n) {
       || accomodation === "hotel" || accomodation === "hostel" || accomodation === "guesthouse") {
       //hotel item1
       var aNode1 = document.createElement("LI");
-      var textaNode1 = document.createTextNode("(Misc.) Hotel/Hostel/Guesthouse Checking in Documents");
+      var textaNode1 = document.createTextNode("(Important) Hotel/Hostel/Guesthouse Checking in Documents");
       aNode1.appendChild(textaNode1);
-      document.getElementById("myMisc").appendChild(aNode1);
+      document.getElementById("myImportant").appendChild(aNode1);
       if (true) {
         var span = document.createElement("SPAN");
         var txt = document.createTextNode("\u00D7");
@@ -375,7 +418,7 @@ function showTab(n) {
       || weather == "freezing") {
       //freezing item1
       var wNode1 = document.createElement("LI");
-      var textwNode1 = document.createTextNode(("(Clothing/Accessories) " + 2*size) + " Winter Coat");
+      var textwNode1 = document.createTextNode(("(Clothing /Accessories) " + 2*size) + " Winter Coat for " + size + " pax");
       wNode1.appendChild(textwNode1);
       document.getElementById("myCloth").appendChild(wNode1);
       if (true) {
@@ -393,7 +436,7 @@ function showTab(n) {
       }
       //freezing item2
       var wNode4 = document.createElement("LI");
-      var textwNode4 = document.createTextNode("(Clothing/Accessories) " + size + " Glove(s) & Scarve(s)");
+      var textwNode4 = document.createTextNode("(Clothing /Accessories) " + size + " Glove(s) & Scarve(s) for " + size + " pax");
       wNode4.appendChild(textwNode4);
       document.getElementById("myCloth").appendChild(wNode4);
       if (true) {
@@ -411,7 +454,7 @@ function showTab(n) {
       }
       //freezing item3
       var wNode5 = document.createElement("LI");
-      var textwNode5 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil(size * (length/2)), length) + " Thermal Wear");
+      var textwNode5 = document.createTextNode("(Clothing /Accessories) " + makeEven(Math.ceil(size * (length/2)), length, size) + " Thermal Wear for " + size + " pax");
       wNode5.appendChild(textwNode5);
       document.getElementById("myCloth").appendChild(wNode5);
       if (true) {
@@ -429,7 +472,7 @@ function showTab(n) {
       }
       //freezing item4
       var wNode10 = document.createElement("LI");
-      var textwNode10 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 3), length) + " Jean(s)/Pant(s)/Dress(es)");
+      var textwNode10 = document.createTextNode("(Clothing /Accessories) " + makeEven(Math.ceil((size*length) / 3), length, size) + " Jean(s)/Pant(s)/Dress(es) for " + size + " pax");
       wNode10.appendChild(textwNode10);
       document.getElementById("myCloth").appendChild(wNode10);
       if (true) {
@@ -448,7 +491,7 @@ function showTab(n) {
       if (weather == "Swowing" || weather == "snowing") {
         //snowing item1
         var wNode2 = document.createElement("LI");
-        var textwNode2 = document.createTextNode("(Clothing/Accessories) " + size + " Snow Boot(s)");
+        var textwNode2 = document.createTextNode("(Clothing /Accessories) " + size + " Snow Boot(s) for " + size + " pax");
         wNode2.appendChild(textwNode2);
         document.getElementById("myCloth").appendChild(wNode2);
         if (true) {
@@ -466,7 +509,7 @@ function showTab(n) {
         }
         //snowing item2
         var wNode3 = document.createElement("LI");
-        var textwNode3 = document.createTextNode("(Misc.) " + size + " Umbrella(s)");
+        var textwNode3 = document.createTextNode("(Misc.) " + size + " Umbrella(s) for " + size + " pax");
         wNode3.appendChild(textwNode3);
         document.getElementById("myMisc").appendChild(wNode3);
         if (true) {
@@ -486,7 +529,7 @@ function showTab(n) {
     } else if (weather == "Rainy" || weather == "rainy") {
       //rainy item1
       var wNode6 = document.createElement("LI");
-      var textwNode6 = document.createTextNode("(Clothing/Accessories) " + size + " Rainwear");
+      var textwNode6 = document.createTextNode("(Clothing /Accessories) " + size + " Rainwear for " + size + " pax");
       wNode6.appendChild(textwNode6);
       document.getElementById("myCloth").appendChild(wNode6);
       if (true) {
@@ -504,7 +547,7 @@ function showTab(n) {
       }
       //rainy item2
       var wNode7 = document.createElement("LI");
-      var textwNode7 = document.createTextNode("(Clothing/Accessories) " + size + " Rainboot(s)");
+      var textwNode7 = document.createTextNode("(Clothing /Accessories) " + size + " Rainboot(s) for " + size + " pax");
       wNode7.appendChild(textwNode7);
       document.getElementById("myCloth").appendChild(wNode7);
       if (true) {
@@ -522,7 +565,7 @@ function showTab(n) {
       }
       //rainy item3
       var wNode11 = document.createElement("LI");
-      var textwNode11 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4), length) + " Jean(s)/Pant(s)/Dress(es)");
+      var textwNode11 = document.createTextNode("(Clothing /Accessories) " + makeEven(Math.ceil((size*length) / 4), length, size) + " Jean(s)/Pant(s)/Dress(es) for " + size + " pax");
       wNode11.appendChild(textwNode11);
       document.getElementById("myCloth").appendChild(wNode11);
       if (true) {
@@ -540,7 +583,7 @@ function showTab(n) {
       }
       //rainy item4
       var wNode12 = document.createElement("LI");
-      var textwNode12 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4), length) + " Short(s)/Skirt(s)");
+      var textwNode12 = document.createTextNode("(Clothing /Accessories) " + makeEven(Math.ceil((size*length) / 4), length, size) + " Short(s)/Skirt(s) for " + size + " pax");
       wNode12.appendChild(textwNode12);
       document.getElementById("myCloth").appendChild(wNode12);
       if (true) {
@@ -559,7 +602,7 @@ function showTab(n) {
     } else {
       //sunny item1
       var wNode8 = document.createElement("LI");
-      var textwNode8 = document.createTextNode("(Misc.) " + size + " Sunglass(es)");
+      var textwNode8 = document.createTextNode("(Misc.) " + size + " Sunglass(es) for " + size + " pax");
       wNode8.appendChild(textwNode8);
       document.getElementById("myMisc").appendChild(wNode8);
       if (true) {
@@ -577,7 +620,7 @@ function showTab(n) {
       }
       //sunny item2
       var lNode5 = document.createElement("LI");
-      var textlNode5 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4), length) + " Jean(s)/Pant(s)/Dress(es)");
+      var textlNode5 = document.createTextNode("(Clothing /Accessories) " + makeEven(Math.ceil((size*length) / 4), length, size) + " Jean(s)/Pant(s)/Dress(es) for " + size + " pax");
       lNode5.appendChild(textlNode5);
       document.getElementById("myCloth").appendChild(lNode5);
       if (true) {
@@ -595,7 +638,7 @@ function showTab(n) {
       }
       //sunny item3
       var wNode9 = document.createElement("LI");
-      var textwNode9 = document.createTextNode("(Clothing/Accessories) " + makeEven(Math.ceil((size*length) / 4), length) + " Short(s)/Skirt(s)");
+      var textwNode9 = document.createTextNode("(Clothing /Accessories) " + makeEven(Math.ceil((size*length) / 4), length, size) + " Short(s)/Skirt(s) for " + size + " pax");
       wNode9.appendChild(textwNode9);
       document.getElementById("myCloth").appendChild(wNode9);
       if (true) {
@@ -617,7 +660,7 @@ function showTab(n) {
     if (outdoor == "Yes" || outdoor == "yes") {
       //outdoor item1
       var oNode1 = document.createElement("LI");
-      var textoNode1 = document.createTextNode("(Clothing/Accessories) " + size + " Hiking/Athlethic Shoe(s)");
+      var textoNode1 = document.createTextNode("(Clothing /Accessories) " + size + " Hiking/Athlethic Shoe(s) for " + size + " pax");
       oNode1.appendChild(textoNode1);
       document.getElementById("myCloth").appendChild(oNode1);
       if (true) {
@@ -639,7 +682,7 @@ function showTab(n) {
     if (water == "Yes" || water == "yes") {
       //water item1
       var wtNode1 = document.createElement("LI");
-      var textwtNode1 = document.createTextNode("(Clothing/Accessories) " + size + " Swimwear");
+      var textwtNode1 = document.createTextNode("(Clothing /Accessories) " + size + " Swimwear for " + size + " pax");
       wtNode1.appendChild(textwtNode1);
       document.getElementById("myCloth").appendChild(wtNode1);
       if (true) {
@@ -657,7 +700,7 @@ function showTab(n) {
       }
       //water item2
       var wtNode2 = document.createElement("LI");
-      var textwtNode2 = document.createTextNode("(Misc.) " + size + " Goggle(s)");
+      var textwtNode2 = document.createTextNode("(Misc.) " + size + " Goggle(s) for " + size + " pax");
       wtNode2.appendChild(textwtNode2);
       document.getElementById("myMisc").appendChild(wtNode2);
       if (true) {
@@ -675,7 +718,7 @@ function showTab(n) {
       }
       //water item3
       var wtNode3 = document.createElement("LI");
-      var textwtNode3 = document.createTextNode("(Toiletries) " + size + " Extra Towel(s)");
+      var textwtNode3 = document.createTextNode("(Toiletries) " + size + " Extra Towel(s) for " + size + " pax");
       wtNode3.appendChild(textwtNode3);
       document.getElementById("myToilet").appendChild(wtNode3);
       if (true) {
